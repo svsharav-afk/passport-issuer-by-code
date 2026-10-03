@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Орган выдачи по коду</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6.25 3.75h7.2l4.3 4.3v5.2"></path>
+              <path d="M13.45 3.75v4.3h4.3"></path>
+              <path d="M6.25 3.75v16.5h6.2"></path>
+              <path d="M9 10h5.2M9 13h3.4"></path>
+              <circle cx="16.1" cy="16.1" r="3.1"></circle>
+              <path d="m18.35 18.35 2.05 2.05"></path>
+            </svg>
+          </span>
+          <h1>Орган выдачи</h1>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Включить светлую тему">
+          <span class="theme-symbol" aria-hidden="true">☼</span>
+          <span id="themeLabel">Светлая</span>
+        </button>
+      </header>
+
+      <p class="intro">Введите код подразделения из паспорта, чтобы посмотреть варианты названия органа выдачи.</p>
+
+      <form id="searchForm" novalidate>
+        <label for="departmentCode">Код подразделения</label>
+        <div class="entry-row">
+          <input
+            id="departmentCode"
+            name="departmentCode"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="420-001"
+            aria-describedby="inputHint statusMessage"
+          >
+          <button class="search-button" type="submit">Найти</button>
+        </div>
+        <p class="input-hint" id="inputHint">Можно ввести 420001 или 420-001.</p>
+      </form>
+
+      <p class="status" id="statusMessage" role="status" aria-live="polite">Введите шестизначный код для поиска.</p>
+      <p class="result-count" id="resultCount" aria-live="polite" hidden></p>
+      <section class="results" id="results" aria-label="Варианты названия органа выдачи"></section>
+
+      <footer class="footer">
+        <span>Справочник: 22.09.2026</span>
+      </footer>
+    </main>
+  </body>
+</html>

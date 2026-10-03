@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/hflabs/fms-unit/blob/7d2d9a2c196147c45e9c87975e212ade8a342f82/fms_unit.csv",
+  "upstreamCommit": "7d2d9a2c196147c45e9c87975e212ade8a342f82",
+  "issued": "2026-09-22",
+  "creator": "DaData.ru",
+  "license": "CC BY-SA 4.0",
+  "sourceSha256": "f05a98e270c108afec76853fd8f694bbec7eeea985447ccceee5c731b5610ed4",
+  "sourceRecords": 16584,
+  "uniqueCodes": 7509,
+  "variants": 16584
+}
